@@ -1,6 +1,7 @@
 <template>
   <div class="video-player">
-    <video class="video-js vjs-custom-skin"></video>
+  	<audio v-if='isAudio' class='video-js vsj-custom-skin'></audio>
+    <video v-else class="video-js vjs-custom-skin"></video>
   </div>
 </template>
 
@@ -14,7 +15,8 @@
       options: {
         type: Object,
         required: true
-      }
+      },
+      isAudio
     },
     mounted() {
       if (!this.player) { 
@@ -175,3 +177,4 @@
 </script>
 
 <style src="./player.css"></style>
+
