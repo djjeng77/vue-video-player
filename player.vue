@@ -16,7 +16,10 @@
         type: Object,
         required: true
       },
-      isAudio
+      isAudio : {
+      	type : Boolean,
+      	required: true
+      }
     },
     mounted() {
       if (!this.player) { 
@@ -177,4 +180,5 @@
 </script>
 
 <style src="./player.css"></style>
+
 
